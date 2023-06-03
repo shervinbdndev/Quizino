@@ -9,6 +9,7 @@ from django.http.request import HttpRequest
 from rest_framework.response import Response
 from django.shortcuts import (render, redirect)
 from rest_framework.permissions import IsAuthenticated
+# from rest_framework.authentication import TokenAuthentication
 from django.http.response import (HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect)
 from .permissions import IsStaff
 from .models import (Question, UserResult)
@@ -93,31 +94,31 @@ class Result(View):
 
 
 
-def send_email(request: HttpRequest) -> Union[HttpResponseRedirect, HttpResponsePermanentRedirect]:
-    if (request.user.is_authenticated):
-        if (UserResult.objects.filter(fullname=request.user.username).exists()):
-            name = request.user.username
-            user_result: UserResult = UserResult.objects.get(fullname=name)
+# def send_email(request: HttpRequest) -> Union[HttpResponseRedirect, HttpResponsePermanentRedirect]:
+#     if (request.user.is_authenticated):
+#         if (UserResult.objects.filter(fullname=request.user.username).exists()):
+#             name = request.user.username
+#             user_result: UserResult = UserResult.objects.get(fullname=name)
 
-            send_mail(
-                subject='نتایج امتحان',
-                message=f'''
-                نام: {user_result}
-                تعداد سوالات: {user_result.totall}
-                امتیاز شما: {user_result.score}
-                درصد: {user_result.percent}%
-                تعداد جواب های درست: {user_result.correct}
-                تعداد جواب های غلط: {user_result.wrong}
-                تاریخ: {user_result.created_at.date()}
-                ''',
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[request.user.email],
-            )
-            return redirect(to=reverse(viewname='result_page'))
-        else:
-            return redirect(to=reverse(viewname='quiz_page'))
-    else:
-        return redirect(to=reverse(viewname='login_page'))
+#             send_mail(
+#                 subject='نتایج امتحان',
+#                 message=f'''
+#                 نام: {user_result}
+#                 تعداد سوالات: {user_result.totall}
+#                 امتیاز شما: {user_result.score}
+#                 درصد: {user_result.percent}%
+#                 تعداد جواب های درست: {user_result.correct}
+#                 تعداد جواب های غلط: {user_result.wrong}
+#                 تاریخ: {user_result.created_at.date()}
+#                 ''',
+#                 from_email=settings.EMAIL_HOST_USER,
+#                 recipient_list=[request.user.email],
+#             )
+#             return redirect(to=reverse(viewname='result_page'))
+#         else:
+#             return redirect(to=reverse(viewname='quiz_page'))
+#     else:
+#         return redirect(to=reverse(viewname='login_page'))
 
 
 
@@ -128,6 +129,7 @@ def send_email(request: HttpRequest) -> Union[HttpResponseRedirect, HttpResponse
 
 class QuestionListView(APIView):
     permission_classes = [IsAuthenticated]
+    # authentication_classes = [TokenAuthentication]
 
     def get(self: Self, request: HttpRequest) -> Response:
         questions_list: Question = Question.objects.filter(status=True)

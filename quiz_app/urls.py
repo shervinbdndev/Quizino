@@ -1,6 +1,6 @@
-from rest_framework.authtoken import views
 from django.urls import path
-from.views import (Quiz, Result, send_email, QuestionListView, QuestionAddView, QuestionUpdateView, QuestionDeleteView, ResultView)
+from rest_framework.authtoken import views
+from.views import (Quiz, Result, QuestionListView, QuestionAddView, QuestionUpdateView, QuestionDeleteView, ResultView)
 
 urlpatterns = [
     path(
@@ -15,11 +15,11 @@ urlpatterns = [
         name='result_page',
     ),
     
-    path(
-        route='receive-result',
-        view=send_email,
-        name='send_email',
-    ),
+    # path(
+    #     route='receive-result',
+    #     view=send_email,
+    #     name='send_email',
+    # ),
     
     path(
         route='api/authentication',
