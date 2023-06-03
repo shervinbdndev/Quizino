@@ -21,11 +21,13 @@ urlpatterns = [
     #     name='send_email',
     # ),
     
-    path(
-        route='api/authentication',
-        view=views.obtain_auth_token,
-        name='Api_Auth',
-    ),
+    
+    # رو این بعدا کار میکنم
+    # path(
+    #     route='api/authentication',
+    #     view=views.obtain_auth_token,
+    #     name='Api_Auth',
+    # ),
     
     path(
         route='api/questions',

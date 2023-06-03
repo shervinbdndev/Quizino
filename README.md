@@ -29,8 +29,7 @@
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/4th.png'>
 <br>
 
-- API بک اند توسعه داده شده با 
-- منتهی یه مقدار مشکل داره ولی درحال درست شدنه
+- API بک اند توسعه داده شده با
 <br>
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/5th.png'>
 <br>
@@ -68,6 +67,17 @@
 127.0.0.1:3000/result | صفحه دیدن نتایج که فقط توسط کاربرانی که وارد اکانت خود شده اند قابل دسترس است و هر دانش آموز/دانشجو میتواند نتیجه آزمون خود را ببیند
 
 
+# آدرس های API
+آدرس ها  |   شرح آدرس ها
+------------- | ------------- 
+127.0.0.1:3000/api/questions  |  لیست سوالات طرح شده را نشان میدهد
+127.0.0.1:3000/api/question/add  |  سوال جدید اضافه میکند
+127.0.0.1:3000/api/question/update/1 | بر اساس آیدی، سوال را آپدیت میکند
+127.0.0.1:3000/api/question/delete/1 | بر اساس آیدی، سوال را حذف میکند
+127.0.0.1:3000/api/userresult | نتیجه آزمون دانش آموز/ دانشجو را نشان میدهد
+
+
+
 # کامند های مورد نیاز
 کامند ها  |   شرح کامند ها
 ------------- | ------------- 
@@ -80,4 +90,3 @@ py manage.py migrate --run-syncdb | برای اعمال تغییرات جدید 
 - <a href='https://www.python.org/'>Python 3.11.3</a>
 - <a href='https://www.djangoproject.com/'>Django (v4.2.1)</a>
 - <a href='https://www.django-rest-framework.org/'>DRF (Django Rest Framework)</a>
-- <a href='https://drf-spectacular.readthedocs.io/en/latest/'>drf-spectacular</a>

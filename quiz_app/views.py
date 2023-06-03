@@ -9,7 +9,6 @@ from django.http.request import HttpRequest
 from rest_framework.response import Response
 from django.shortcuts import (render, redirect)
 from rest_framework.permissions import IsAuthenticated
-# from rest_framework.authentication import TokenAuthentication
 from django.http.response import (HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect)
 from .permissions import IsStaff
 from .models import (Question, UserResult)
@@ -129,7 +128,6 @@ class Result(View):
 
 class QuestionListView(APIView):
     permission_classes = [IsAuthenticated]
-    # authentication_classes = [TokenAuthentication]
 
     def get(self: Self, request: HttpRequest) -> Response:
         questions_list: Question = Question.objects.filter(status=True)
