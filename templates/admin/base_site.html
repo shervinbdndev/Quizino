@@ -9,9 +9,8 @@
     <h1 id="site-name"><a href="{% url 'admin:index' %}">پنل مدیریت</a></h1>
 {% endblock %}
 
-{% block extrastyle %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/override.css' %}">
-
+{% block extrastyle %}
+    {% include 'includes/header.html' %}
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
