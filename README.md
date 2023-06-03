@@ -46,6 +46,12 @@
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/7th.png'>
 <br>
 
+- Token Authorization
+- API برای ایجاد دسترسی دانش آموزان/ دانشجویان به 
+<br>
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/8th.png'>
+<br>
+
 <br>
 
 
