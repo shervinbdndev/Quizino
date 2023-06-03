@@ -28,6 +28,19 @@
 <br>
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/5th.png'>
 <br>
+
+## Jazzmin پنل ادمین با تم
+
+- دارای بخش پنل ادمین برای طرح سوالات و مدیریت و آپدیت کردن سوالات و تعیین درجه سختی آنها
+<br>
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/6th.png'>
+<br>
+
+- قابلیت دیدن نتایج آزمون های دانش آموزان/ دانشجویان توسط ادمین
+<br>
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/7th.png'>
+<br>
+
 <br>
 
 
