@@ -69,8 +69,12 @@
 
 
 # کامند های مورد نیاز
+کامند ها  |   شرح کامند ها
 ------------- | ------------- 
 برای ایجاد کردن ادمین جدید  |   py manage.py createsuperuser
+برای ثبت تغییرات جدید مدل های دیتابیس  |   py manage.py makemigrations
+برای اعمال تغییرات جدید مدل های دیتابیس  |   py manage.py migrate
+برای اعمال تغییرات جدید مدل های دیتابیس بعلاوه سینک کردن دیتابیس  |   py manage.py migrate --run-syncdb
 
 ## پیش نیازها
 - <a href='https://www.python.org/'>Python 3.11.3</a>
