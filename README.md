@@ -6,36 +6,27 @@
 - سیستم ورود و خروج و ایجاد حساب کاربری دانشجو توسط ادمین
 <br>
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/1st.png'>
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/1st5.png'>
 <br>
 
-- تایمر
+- تایمر و تعیین درجه سختی سوالات و صفحه سوالات
 <br>
-
-<br>
-
-- صفحه سوالات
-<br>
-
-<br>
-
-- تعیین درجه سختی سوالات
-<br>
-
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/2nd.png'>
 <br>
 
 - صفحه نتایج
 <br>
-
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/3rd.png'>
 <br>
 
 - (با کمک جاوا اسکریپت) قوانین امتحان
 <br>
-
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/4th.png'>
 <br>
 
 - API بک اند توسعه داده شده با 
 <br>
-
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/5th.png'>
 <br>
 
 ## پیش نیازها
