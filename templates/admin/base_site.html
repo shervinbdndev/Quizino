@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}مدیریت وبسایت{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">پنل مدیریت</a></h1>
+{% endblock %}
+
+{% block extrastyle %} <link rel="stylesheet" type="text/css" href="{% static 'Css/override.css' %}"> {% endblock %}
+
+{% block nav-global %}{% endblock %}

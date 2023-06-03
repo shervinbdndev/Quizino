@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'includes/header.html' %}
+
+<body>
+    <div class='box'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+    </div>
+
+    <div class="result_box activeResult">
+        <div class="icon">
+            {% if user.percent > 80 %}
+                <i class="fas fa-crown" style="color: #ffda00"></i>
+            {% elif user.percent >= 50 %}
+                <i class="fas fa-thumbs-up" style="color: #43b31b"></i>
+            {% else %}
+                <i class="fas fa-thumbs-down" style="color: #e2192c"></i>
+            {% endif %}
+        </div>
+
+        <div class="complete_text">آزمون شما به پایان رسید !</div>
+
+        <div class="score_text">
+            {% if user.percent > 80 %}
+                <span> باریکلا پهلوون ، خوش درخشیدی 🎉</span>
+                <hr>
+                <span> نام کامل : {{ user.fullname }}</span>
+                <span> تعداد کل سوالات : {{ user.totall }}</span>
+                <span> امتیاز شما : {{ user.score }}</span>
+                <span> درصد شما : {{ user.percent }}</span>
+                <span> تعداد سوالات صحیح : {{ user.correct }}</span>
+                <span> تعداد سوالات غلط : {{ user.wrong }}</span>
+            {% elif user.percent >= 50 %}
+                <span> بد نبود ، بیشتر تلاش کن 😎</span>
+                <hr>
+                <span> نام کامل : {{ user.fullname }}</span>
+                <span> تعداد کل سوالات : {{ user.totall }}</span>
+                <span> امتیاز شما : {{ user.score }}</span>
+                <span> درصد شما : {{ user.percent }}</span>
+                <span> تعداد سوالات صحیح : {{ user.correct }}</span>
+                <span> تعداد سوالات غلط : {{ user.wrong }}</span>
+            {% else %}
+                <span> سید خراب کردی ، ازت ناامید شدم 😐</span>
+                <hr>
+                <span> نام کامل : {{ user.fullname }}</span>
+                <span> تعداد کل سوالات : {{ user.totall }}</span>
+                <span> امتیاز شما : {{ user.score }}</span>
+                <span> درصد شما : {{ user.percent }}</span>
+                <span> تعداد سوالات صحیح : {{ user.correct }}</span>
+                <span> تعداد سوالات غلط : {{ user.wrong }}</span>
+            {% endif %}
+        </div>
+
+        <div class="buttons">
+            <a class="restart" href="{% url 'send_email' %}">دریافت نتایج</a>
+            <a class="quit" href="{% url 'quiz_page' %}">خروج از برنامه</a>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

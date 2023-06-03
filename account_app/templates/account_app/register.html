@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'includes/header.html' %}
+
+<body translate="no">
+    <div class='box'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+    </div>
+
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" method="post">
+                {% csrf_token %}
+
+                {% for error in form.password.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+
+                {{ form.first_name }}
+                {{ form.last_name }}
+                {{ form.email }}
+                {{ form.password }}
+                {{ form.conf_pass }}
+
+                <button type="submit">ایجاد کاربر جدید</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

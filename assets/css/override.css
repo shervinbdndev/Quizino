@@ -1,0 +1,10 @@
+@font-face {
+    font-family: tanha;
+    src: url("../fonts/Tanha.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: tanha;
+}

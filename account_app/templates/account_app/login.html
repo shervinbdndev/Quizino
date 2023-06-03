@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'includes/header.html' %}
+
+<body translate="no">
+<div class='box'>
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+</div>
+
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" method="post">
+            {% csrf_token %}
+
+            {% for error in form.fullname.errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+
+            {{ form.fullname }}
+            {{ form.password }}
+
+            <button type="submit">ورود</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
