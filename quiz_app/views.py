@@ -127,7 +127,7 @@ class Result(View):
 
 
 class QuestionListView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsStaff]
 
     def get(self: Self, request: HttpRequest) -> Response:
         questions_list: Question = Question.objects.filter(status=True)
