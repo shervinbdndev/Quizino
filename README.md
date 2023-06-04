@@ -34,6 +34,11 @@
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/5th.png'>
 <br>
 
+- API رابط کاربری جذاب برای مشاهده
+<br>
+<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/8th.png'>
+<br>
+
 ## Jazzmin پنل ادمین با تم
 
 - دارای بخش پنل ادمین برای طرح سوالات و مدیریت و آپدیت کردن سوالات و تعیین درجه سختی آنها
@@ -44,12 +49,6 @@
 - قابلیت دیدن نتایج آزمون های دانش آموزان/ دانشجویان توسط ادمین
 <br>
 <img src='https://github.com/shervinbdndev/Quizino/blob/master/images/7th.png'>
-<br>
-
-- Token Authorization
-- API برای تعیین دسترسی دانش آموزان/ دانشجویان به 
-<br>
-<img src='https://github.com/shervinbdndev/Quizino/blob/master/images/8th.png'>
 <br>
 
 <br>
@@ -87,6 +86,7 @@
 # کامند های مورد نیاز
 کامند ها  |   شرح کامند ها
 ------------- | ------------- 
+py manage.py runserver 3000 | اجرای پروژه روی پورت 3000 بصورت لوکال هاست
 py manage.py createsuperuser | برای ایجاد کردن ادمین جدید 
 py manage.py makemigrations | برای ثبت تغییرات جدید مدل های دیتابیس  
 py manage.py migrate | برای اعمال تغییرات جدید مدل های دیتابیس 
